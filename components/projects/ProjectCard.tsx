@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Project } from "@/data/projects";
 import { Code2, ArrowRight } from "lucide-react";
@@ -21,7 +22,7 @@ export function ProjectCard({ project, index, onClick }: ProjectCardProps) {
     >
       <div className="h-48 w-full bg-gradient-to-br from-white/5 to-white/10 relative overflow-hidden flex items-center justify-center">
         {project.visuals && project.visuals.length > 0 ? (
-          <img src={project.visuals[0].src} alt={project.visuals[0].alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          <Image src={project.visuals[0].src} alt={project.visuals[0].alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
         ) : (
           <Code2 className="w-16 h-16 text-white/10 group-hover:scale-110 group-hover:text-primary/40 transition-all duration-500" />
         )}

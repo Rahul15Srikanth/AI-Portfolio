@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { personalInfo } from "@/data/portfolio";
-import { Mail, FileText } from "lucide-react";
+import { FileText } from "lucide-react";
 import { GithubIcon as Github } from "@/components/icons/GithubIcon";
 import { LinkedinIcon as Linkedin } from "@/components/icons/LinkedinIcon";
 
